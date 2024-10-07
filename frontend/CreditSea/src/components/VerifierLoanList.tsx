@@ -5,7 +5,7 @@ import LoanCard from "./LoanCard.tsx";
 interface Loan {
   id: number;
   officer: string;
-  amount: number;
+  amount: string;
   date: string;
   status: string;
 }
