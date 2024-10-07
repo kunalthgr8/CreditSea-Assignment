@@ -3,9 +3,9 @@ import LoanCard from "./LoanCard.tsx";
 
 // Define the loan type
 interface Loan {
-  id: string;
+  id: number;
   officer: string;
-  amount: string;
+  amount: number;
   date: string;
   status: string;
 }

@@ -6,7 +6,7 @@ import LoanCard from "./LoanCard.tsx";
 interface Loan {
   id: number;
   officer: string;
-  amount: string;
+  amount: number;
   date: string;
   status: string;
 }
@@ -30,7 +30,7 @@ const LoanList: React.FC = () => {
         
         // Mapping backend data to frontend format
         const formattedLoans = data.map((loan: any) => ({
-          id: loan._id,
+          id: loan._id.toString(),
           officer: loan.loanOfficer,
           amount: new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(loan.loanAmount),
           date: new Date(loan.createdAt).toLocaleDateString('en-IN', { month: 'long', day: 'numeric', year: 'numeric' }),
@@ -54,7 +54,7 @@ const LoanList: React.FC = () => {
   return (
     <div className="bg-white rounded-lg shadow-lg p-4">
       {loans.length > 0 ? (
-        loans.map((loan) => <LoanCard key={loan.id} loan={loan} />)
+        loans.map((loan) => <LoanCard key={loan.id} loan={loan} actions={true} />)
       ) : (
         <div>No loans found</div>
       )}

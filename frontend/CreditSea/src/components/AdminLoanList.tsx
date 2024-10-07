@@ -3,12 +3,13 @@ import LoanCard from "./LoanCard.tsx";
 
 // Define the loan type
 interface Loan {
-  id: string;
+  id: number; // If your backend uses number
   officer: string;
-  amount: string;
+  amount: number;
   date: string;
   status: string;
 }
+
 
 const LoanList: React.FC = () => {
   const [loans, setLoans] = useState<Loan[]>([]);
