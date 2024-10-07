@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import LoanList from './AdminLoanList.tsx';
-import { useParams } from "react-router-dom";
 
 interface Loan {
   borrowers: number;
