@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import LoanList from './VerifierLoanList.tsx';
-import { useParams } from "react-router-dom";
 
 // Define the Loan interface
 interface Loan {

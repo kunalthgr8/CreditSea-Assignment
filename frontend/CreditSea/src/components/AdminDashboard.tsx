@@ -11,8 +11,8 @@ interface Loan {
 const VerifierDashboard: React.FC = () => {
   // const { officerId } = useParams<{ officerId: string }>(); // Extract officerId from the URL
   const [loans, setLoans] = useState<Loan[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchLoans = async () => {
@@ -32,9 +32,9 @@ const VerifierDashboard: React.FC = () => {
 
         setLoans(updatedData);
       } catch (err: any) {
-        setError(err.message);
+        // setError(err.message);
       } finally {
-        setLoading(false);
+        // setLoading(false);
       }
     };
 
