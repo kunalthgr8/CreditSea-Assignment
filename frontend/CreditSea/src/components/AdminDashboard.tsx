@@ -10,7 +10,7 @@ interface Loan {
 }
 
 const VerifierDashboard: React.FC = () => {
-  const { officerId } = useParams<{ officerId: string }>(); // Extract officerId from the URL
+  // const { officerId } = useParams<{ officerId: string }>(); // Extract officerId from the URL
   const [loans, setLoans] = useState<Loan[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

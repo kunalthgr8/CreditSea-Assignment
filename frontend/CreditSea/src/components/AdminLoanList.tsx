@@ -3,7 +3,7 @@ import LoanCard from "./LoanCard.tsx";
 
 // Define the loan type
 interface Loan {
-  id: number; // If your backend uses number
+  id: string; // If your backend uses string
   officer: string;
   amount: string;
   date: string;
