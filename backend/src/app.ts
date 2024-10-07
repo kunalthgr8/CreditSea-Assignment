@@ -4,7 +4,7 @@ import { connectDB } from './config/database';
 import cors from 'cors';
 
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // Connect to MongoDB
 connectDB();
@@ -24,6 +24,11 @@ app.use('/api', loanRoutes);
 app.use((err: any, req: any, res: any, next: any) => {
   console.error(err.stack);
   res.status(500).send({ error: 'Something went wrong!' });
+});
+
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
 export default app;
