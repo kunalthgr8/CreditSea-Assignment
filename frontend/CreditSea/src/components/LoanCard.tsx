@@ -4,9 +4,9 @@ import axios from "axios";
 // Define props structure
 interface LoanCardProps {
   loan: {
-    id: number;
+    id: string;
     officer: string;
-    amount: number;
+    amount: string;
     date: string;
     status: string;
   };
