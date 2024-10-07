@@ -19,7 +19,7 @@ const VerifierDashboard: React.FC = () => {
   // Function to fetch loans data
   const fetchLoans = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/api/loans/summary`);
+      const response = await fetch(`https://credit-sea-assignment-bck.vercel.app/api/loans/summary`);
       if (!response.ok) {
         throw new Error('Failed to fetch loans');
       }

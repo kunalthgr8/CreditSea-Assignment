@@ -18,7 +18,7 @@ const LoanList: React.FC = () => {
   // Use useCallback to memoize the fetchLoans function
   const fetchLoans = useCallback(async () => {
     try {
-      const response = await fetch(`http://localhost:8000/api/loans/?role=${"verifier"}`);
+      const response = await fetch(`https://credit-sea-assignment-bck.vercel.app/api/loans/?role=${"verifier"}`);
       if (!response.ok) {
         throw new Error("Failed to fetch loans");
       }

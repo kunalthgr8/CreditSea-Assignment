@@ -59,7 +59,7 @@ const LoanCard: React.FC<LoanCardProps> = ({ loan, actions, role }) => {
       const endpoint = role === "verifier"
         ? "status-verifier"
         : "status-admin";
-      await axios.patch(`http://localhost:8000/api/loans/${endpoint}?_id=${loan.id}`, {
+      await axios.patch(`https://credit-sea-assignment-bck.vercel.app/api/loans/${endpoint}?_id=${loan.id}`, {
         status: updatedStatus,
         loanOfficer: role === "verifier" ? "Jon Okoh" : undefined,
       });

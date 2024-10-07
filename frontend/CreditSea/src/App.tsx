@@ -46,7 +46,7 @@ const App: React.FC = () => {
     e.preventDefault();
 
     const idNumber = 12140970;
-    const apiUrl = `http://localhost:8000/api/loans?idNumber=${idNumber}`;
+    const apiUrl = `https://credit-sea-assignment-bck.vercel.app/api/loans?idNumber=${idNumber}`;
 
     try {
       const response = await fetch(apiUrl, {

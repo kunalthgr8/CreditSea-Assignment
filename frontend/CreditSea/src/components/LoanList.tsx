@@ -20,7 +20,7 @@ const LoanList: React.FC = () => {
   useEffect(() => {
     const fetchLoans = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/loans/id?idNumber=${12140970}`);
+        const response = await fetch(`https://credit-sea-assignment-bck.vercel.app/api/loans/id?idNumber=${12140970}`);
         
         if (!response.ok) {
           throw new Error('Failed to fetch loans');
