@@ -3,7 +3,7 @@ import LoanCard from "./LoanCard.tsx";
 
 // Define the loan type
 interface Loan {
-  id: number;
+  id: string;
   officer: string;
   amount: string;
   date: string;
@@ -25,7 +25,7 @@ const LoanList: React.FC = () => {
 
       const data = await response.json();
       const updatedData = data.map((loan: any) => ({
-        id: loan._id, // Backend _id mapped to id
+        id: loan._id.toString(), // Backend _id mapped to id and converted to string
         officer: loan.reasonForLoan, // Mapping reasonForLoan to officer
         amount: loan.fullName, // Mapping fullName
         date: new Date(loan.createdAt).toLocaleDateString("en-IN", { month: "long", day: "numeric", year: "numeric" }), // Format date
