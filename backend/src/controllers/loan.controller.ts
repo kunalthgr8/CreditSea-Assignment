@@ -19,6 +19,7 @@ export const createLoan = asyncWrapper(async (req: Request, res: Response) => {
   const idNumber = req.query.idNumber;
   const status = "PENDING";
   const loanOfficer = "Not Assigned";
+ 
 
   if (!idNumber) {
     return errorHandler(res, 400, 'IdNumber is required.');
